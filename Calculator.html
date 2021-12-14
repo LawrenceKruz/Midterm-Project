@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>My Calculator</title>
+</head>
+<body>
+    <div class="content">
+        <div class="calcuContent">
+            <h1>MY CALCULATOR</h1>
+            <form action="" name="formCalculator">
+                <span>First Number: </span><input type="text1" name="firstNumber">
+                <br>
+                <span>Second Number: </span><input type="text" name="secondNumber">
+                <br>
+                <span>Result: </span><input type="text" name="resultNumber">
+                <br>
+                <input type="button" value="Sum" class="button" onclick="sumValues()">
+                <br>
+                <input type="button" value="Difference" class="button" onclick="diffValues()">
+                <br>
+                <input type="button" value="Product" class="button" onclick="proValues()">
+                <br>
+                <input type="button" value="Quotient" class="button" onclick="quoValues()">
+                <br>
+                <input type="button" value="Clear" class="button" onclick="clearValues()">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function sumValues(){
+            var num1, num2, res;
+            num1 = Number(document.formCalculator.firstNumber.value);
+            num2 = Number(document.formCalculator.secondNumber.value);
+            res = num1 + num2;
+
+            document.formCalculator.resultNumber.value=res;
+        }
+
+        function diffValues(){
+            var num1, num2, res;
+            num1 = Number(document.formCalculator.firstNumber.value);
+            num2 = Number(document.formCalculator.secondNumber.value);
+            res = num1 - num2;
+
+            document.formCalculator.resultNumber.value=res;
+        }
+
+        function proValues(){
+            var num1, num2, res;
+            num1 = Number(document.formCalculator.firstNumber.value);
+            num2 = Number(document.formCalculator.secondNumber.value);
+            res = num1 * num2;
+
+            document.formCalculator.resultNumber.value=res;
+        }
+
+        function quoValues(){
+            var num1, num2, res;
+            num1 = Number(document.formCalculator.firstNumber.value);
+            num2 = Number(document.formCalculator.secondNumber.value);
+            res = num1 / num2;
+
+            document.formCalculator.resultNumber.value=res;
+        }
+
+        function clearValues(){
+            document.formCalculator.firstNumber.value="";
+            document.formCalculator.secondNumber.value="";
+            document.formCalculator.resultNumber.value="";
+        }
+
+    </script>
+
+    <style>
+        body{
+        top: 0;
+        margin: 0;
+        position: fixed;
+        }
+        
+        .content .calcuContent h1{
+            text-align: center;
+            color: rgb(238, 238, 67);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight:lighter;
+        }
+         
+        .content{
+            
+            width: 1980px;
+            height: 1080px;
+            
+            align-self: center;
+            background-color: rgb(161, 78, 161);
+            background-position: top center;
+        }
+        
+        .content .calcuContent{
+            position: absolute;
+            left: 22%;
+            top: 10%;
+            color: white;
+            background-repeat:no-repeat;
+            background-image: url(unnamed.jpg);
+            background-size: 100% 100%;
+            background-position: top center;
+            height: 400px;
+            width: 500px;
+            border-radius: 50px;
+            padding-left: 30px;
+        }
+        
+         
+        input{
+           height: 20px;
+            
+        }</style>
+</body>
+</html>
